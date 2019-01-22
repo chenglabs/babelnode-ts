@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "rimraf dist && babel ./src --out-dir dist --copy-files --extensions .ts,.js",
-    "start": "NODE_ENV=production yarn build && node dist/index.js",
+    "start": "NODE_ENV=production node dist/index.js",
     "dev": "NODE_ENV=development nodemon src/index.ts --ext ts,js,graphql --exec babel-node --extensions .ts,.js",
     "tsc": "tsc --isolatedModules false",
     "lint": "tslint -c tslint.json --fix --format verbose  src/**/*.{ts,tsx}"
