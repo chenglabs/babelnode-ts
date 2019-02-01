@@ -11,7 +11,10 @@
     "start": "NODE_ENV=production node dist/index.js",
     "dev": "NODE_ENV=development nodemon src/index.ts --ext ts,js,graphql --exec babel-node --extensions .ts,.js",
     "tsc": "tsc --isolatedModules false",
-    "lint": "tslint -c tslint.json --fix --format verbose  src/**/*.{ts,tsx}"
+    "test": "jest",
+    "test:watch": "yarn test --watch",
+    "tslint": "tslint -c tslint.json --fix --format verbose  src/**/*.{ts,tsx}",
+    "eslint": "eslint ."
   },
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
@@ -27,10 +30,17 @@
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-typescript": "^7.1.0",
+    "@types/jest": "^23.3.13",
     "@types/node": "^10.12.18",
+    "@types/supertest": "^2.0.7",
     "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.0.0",
+    "eslint": "^5.12.1",
+    "jest": "^24.0.0",
     "nodemon": "^1.18.9",
     "rimraf": "^2.6.2",
+    "supertest": "^3.4.2",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.17.0",
     "typescript": "^3.2.4"

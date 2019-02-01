@@ -13,6 +13,13 @@ const server = http.createServer((_req, res) => {
   res.end("Hello World\n");
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+
+if (process.env.NODE_ENV !== 'test') {
+  server.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
+  });
+}
+
+
+export { server }
+
