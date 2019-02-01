@@ -1,9 +1,10 @@
+import dotenv from "dotenv";
 import fs from "fs";
 
-let result: any;
+let result: dotenv.DotenvConfigOutput = {};
 const configFile = `config/${process.env.NODE_ENV || ""}.env`;
 if (fs.existsSync(configFile)) {
-  result = require("dotenv").config({ path: configFile });
+  result = dotenv.config({ path: configFile });
   if (result.error) {
     throw result.error;
   }

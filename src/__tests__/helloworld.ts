@@ -11,5 +11,3 @@ describe("Get /", () => {
       .expect(200, done);
   });
 });
-
-
