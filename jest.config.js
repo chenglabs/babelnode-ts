@@ -23,7 +23,6 @@ module.exports = {
     "^.+\\.module\\.(css|sass|scss)$"
   ],
   testPathIgnorePatterns: [
-    "/node_modules/",
-    "/__utils"
+    "/node_modules/"
   ]
 };
